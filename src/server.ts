@@ -15,6 +15,10 @@ app.get('/', (_req, res) => {
   res.send('Clintech backend rodando.')
 })
 
+app.get('/health', (_req, res) => {
+  res.status(200).json({ ok: true })
+})
+
 app.use('/whatsapp', whatsappRoutes)
 
 app.listen(PORT, '0.0.0.0', () => {

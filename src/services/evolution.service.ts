@@ -33,7 +33,7 @@ export async function sendTextMessage({
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        apikey: EVOLUTION_API_KEY
+        apikey: EVOLUTION_API_KEY as string
       },
       body: JSON.stringify({
         number: cleanNumber,
